@@ -62,3 +62,30 @@
 (global-set-key (kbd "C-c o") 'imenu-anywhere)
 
 (global-auto-revert-mode t)
+
+;; disable truncate-lines
+(visual-line-mode -1)
+(set-default 'truncate-lines t)
+(setq truncate-partial-width-windows nil)
+
+;; scrolling
+(setq scroll-step 1 scroll-conservatively 10000)
+(global-set-key [up] (lambda () (interactive) (scroll-down 1)))
+(global-set-key [down] (lambda () (interactive) (scroll-up 1)))
+(global-set-key [left] (lambda () (interactive) (scroll-right tab-width t)))
+(global-set-key [right] (lambda () (interactive) (scroll-left tab-width t)))
+
+;; disable line hightlight
+(add-hook 'enh-ruby-mode-hook
+          (lambda ()
+            (hl-line-mode -1)
+            (global-hl-line-mode -1))
+          't)
+
+;; show line number
+
+;; evil
+(require 'evil)
+(global-set-key (kbd "M-n") 'evil-search-word-forward)
+(global-set-key (kbd "M-p") 'evil-search-word-backward)
+

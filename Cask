@@ -24,3 +24,6 @@
 (depends-on "ag")
 (depends-on "soft-morning-theme")
 (depends-on "web-mode")
+(depends-on "speedbar")
+(depends-on "ecb")
+(depends-on "evil")
