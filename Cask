@@ -27,3 +27,4 @@
 (depends-on "speedbar")
 (depends-on "ecb")
 (depends-on "evil")
+(depends-on "zenburn-theme")

@@ -89,3 +89,5 @@
 (global-set-key (kbd "M-n") 'evil-search-word-forward)
 (global-set-key (kbd "M-p") 'evil-search-word-backward)
 
+;; theme-load
+(load-theme 'zenburn t)
