@@ -30,22 +30,6 @@
 ;; rainbow delemiter
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
-;; paredit
-;; (require 'paredit)
-;; (define-key paredit-mode-map (kbd "M-(") 'paredit-wrap-round)
-;; (define-key paredit-mode-map (kbd "M-)") 'paredit-wrap-round-from-behind)
-;; (define-key paredit-mode-map (kbd "M-s-8") 'paredit-wrap-square)
-;; (define-key paredit-mode-map (kbd "M-s-9") 'paredit-wrap-square-from-behind)
-;; (define-key paredit-mode-map (kbd "M-s-(") 'paredit-wrap-curly)
-;; (define-key paredit-mode-map (kbd "M-s-)") 'paredit-wrap-curly-from-behind)
-;; (define-key paredit-mode-map (kbd "C-w") 'paredit-kill-region-or-backward-word)
-;; (define-key paredit-mode-map (kbd "C-M-<backspace>") 'backward-kill-sexp)
-
-;; inf-ruby
-;;(autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
-;;(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
-;(add-hook 'ruby-mode-hook 'inf-ruby-console-auto)
-
 ;; robe
 (require 'robe)
 (add-hook 'enh-ruby-mode-hook 'robe-mode)
