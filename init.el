@@ -64,6 +64,9 @@
 
 ;; show line number
 
+;; javascript tab
+(setq js-indent-level 2)
+
 ;; evil
 (require 'evil)
 (global-set-key (kbd "M-n") 'evil-search-word-forward)
