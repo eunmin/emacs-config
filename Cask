@@ -30,3 +30,4 @@
 (depends-on "evil")
 (depends-on "zenburn-theme")
 (depends-on "clj-refactor")
+(depends-on "slamhound")
