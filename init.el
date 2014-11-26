@@ -12,7 +12,7 @@
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 (setq projectile-remember-window-configs t)
 
-  ;; ido
+;; ido
 (require 'ido)
 (ido-mode t)
 (setq ido-decorations (quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
@@ -33,8 +33,6 @@
 ;; robe
 (require 'robe)
 (add-hook 'enh-ruby-mode-hook 'robe-mode)
-
-;(add-hook 'robe-mode (inf-ruby-console-auto))
 
 ;; company
 (global-company-mode t)
@@ -73,3 +71,9 @@
 
 ;; theme-load
 (load-theme 'zenburn t)
+
+;; clj-refactor
+(require 'clj-refactor)
+(add-hook 'clojure-mode-hook (lambda ()
+                               (clj-refactor-mode 1)
+                               (cljr-add-keybindings-with-prefix "C-c C-m")))
