@@ -83,3 +83,6 @@
 
 ;; cider auto-reload
 (load-file "~/.emacs.d/cider-set-ns-and-eval-buffer/cider-set-ns-and-eval-buffer.el")
+
+;; slamhound
+(global-set-key (kbd "C-c O") 'slamhound)
