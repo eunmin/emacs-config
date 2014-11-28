@@ -26,6 +26,9 @@
 
 ;; cider
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'cider-repl-mode-hook 'paredit-mode)
+(setq nrepl-hide-special-buffers t)
 
 ;; rainbow delemiter
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
@@ -83,6 +86,8 @@
 
 ;; cider auto-reload
 (load-file "~/.emacs.d/cider-set-ns-and-eval-buffer/cider-set-ns-and-eval-buffer.el")
+(require 'cider-set-ns-and-eval-buffer)
+(global-set-key (kbd "C-c c") 'cider-set-ns-and-eval-buffer)
 
 ;; slamhound
 (global-set-key (kbd "C-c O") 'slamhound)
