@@ -3,10 +3,6 @@
 (cask-initialize)
 (require 'pallet)
 
-;; flymake-ruby
-(require 'flymake-ruby)
-(add-hook 'enh-ruby-mode-hook 'flymake-ruby-load)
-
 ;; projectile
 (projectile-global-mode)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
@@ -23,19 +19,6 @@
     (define-key ido-completion-map (kbd "C-n") 'ido-next-match)
     (define-key ido-completion-map (kbd "C-p") 'ido-prev-match))
 (add-hook 'ido-setup-hook 'ido-define-keys)
-
-;; cider
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'cider-repl-mode-hook 'paredit-mode)
-(setq nrepl-hide-special-buffers t)
-
-;; rainbow delemiter
-(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
-
-;; robe
-(require 'robe)
-(add-hook 'enh-ruby-mode-hook 'robe-mode)
 
 ;; company
 (global-company-mode t)
@@ -78,16 +61,5 @@
 ;; theme-load
 (load-theme 'zenburn t)
 
-;; clj-refactor
-(require 'clj-refactor)
-(add-hook 'clojure-mode-hook (lambda ()
-                               (clj-refactor-mode 1)
-                               (cljr-add-keybindings-with-prefix "C-c C-m")))
-
-;; cider auto-reload
-(load-file "~/.emacs.d/cider-set-ns-and-eval-buffer/cider-set-ns-and-eval-buffer.el")
-(require 'cider-set-ns-and-eval-buffer)
-(global-set-key (kbd "C-c c") 'cider-set-ns-and-eval-buffer)
-
-;; slamhound
-(global-set-key (kbd "C-c O") 'slamhound)
+(load-file "ruby.el")
+(load-file "clojure.el")

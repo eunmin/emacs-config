@@ -31,3 +31,4 @@
 (depends-on "zenburn-theme")
 (depends-on "clj-refactor")
 (depends-on "slamhound")
+(depends-on "multiple-cursors")
