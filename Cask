@@ -32,3 +32,4 @@
 (depends-on "clj-refactor")
 (depends-on "slamhound")
 (depends-on "multiple-cursors")
+(depends-on "command-log-mode")

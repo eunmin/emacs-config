@@ -61,5 +61,5 @@
 ;; theme-load
 (load-theme 'zenburn t)
 
-(load-file "ruby.el")
-(load-file "clojure.el")
+(load-file "~/.emacs.d/ruby.el")
+(load-file "~/.emacs.d/clojure.el")
