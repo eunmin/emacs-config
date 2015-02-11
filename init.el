@@ -63,3 +63,25 @@
 
 (load-file "~/.emacs.d/ruby.el")
 (load-file "~/.emacs.d/clojure.el")
+
+(setq ruby-insert-encoding-magic-comment nil)
+
+(defun revert-buffer-with-coding-system-no-confirm (coding-system &optional force)
+  (interactive "zCoding system for visited file (default nil): \nP")
+  (check-coding-system coding-system)
+  (if (and coding-system buffer-file-coding-system (null force))
+      (setq coding-system
+            (merge-coding-systems coding-system buffer-file-coding-system)))
+  (let ((coding-system-for-read coding-system))
+    (revert-buffer t t)))
+
+(defun revert-buffer-with-utf8 ()
+  (interactive)
+  (revert-buffer-with-coding-system-no-confirm 'utf-8))
+
+(global-set-key (kbd "C-c u") 'revert-buffer-with-utf8)
+
+;; set active background color
+
+;; android
+(load-file "~/.emacs.d/android.el")

@@ -32,3 +32,5 @@
 (depends-on "clj-refactor")
 (depends-on "slamhound")
 (depends-on "multiple-cursors")
+(depends-on "android-mode")
+(depends-on "midje-mode")

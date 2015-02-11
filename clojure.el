@@ -3,6 +3,7 @@
 (add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
 (setq nrepl-hide-special-buffers t)
+(setq cider-show-error-buffer nil)
 
 ;; rainbow delemiter
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
@@ -40,3 +41,7 @@
         (downcase-region start end)))))
 
 (global-set-key (kbd "C-c i") 'toggle-camelcase-hyphen)
+
+;; midje
+(require 'midje-mode)
+(add-hook 'clojure-mode-hook 'midje-mode)
