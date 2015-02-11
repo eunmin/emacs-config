@@ -34,3 +34,4 @@
 (depends-on "multiple-cursors")
 (depends-on "android-mode")
 (depends-on "midje-mode")
+(depends-on "command-log-mode")
