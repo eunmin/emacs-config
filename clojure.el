@@ -41,7 +41,3 @@
         (downcase-region start end)))))
 
 (global-set-key (kbd "C-c i") 'toggle-camelcase-hyphen)
-
-;; midje
-(require 'midje-mode)
-(add-hook 'clojure-mode-hook 'midje-mode)
